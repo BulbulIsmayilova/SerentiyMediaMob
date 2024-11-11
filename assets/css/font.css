@@ -1,0 +1,37 @@
+@font-face{
+    font-family: "ProximaRegular";
+    src: url('../font/Proxima\ Nova\ Regular.otf')  ;
+}
+
+.wrapper{
+    width: 100%;
+    padding-inline: 20px;
+}
+
+h1, span {
+    font-family: "Bodoni" !important;
+    src: url('../font/Bodoni72C.otf');
+}
+
+* {
+    font-family: "ProximaRegular" !important;
+}
+
+.video-hero {
+    top: -20%;
+}
+
+.hero-title{
+    width: 83%;
+}
+
+@media only screen and (min-width:570px) {
+    .hero-title {
+        width: 70%;
+    }
+}
+@media only screen and (min-width:640px) {
+    .hero-title {
+        width: 60%;
+    }
+}

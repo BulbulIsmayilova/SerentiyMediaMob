@@ -8,10 +8,11 @@
     <link rel="stylesheet" href="assets/css/font.css" />
   </head>
   <body class="bg-[#161616]">
-    <header class="py-[50px]">
+
+    <header class="py-[25px]">
       <div class="wrapper">
         <div class="flex justify-between mb-8 items-center">
-          <div >
+          <div>
             <svg
               width="59"
               height="56"
@@ -185,173 +186,235 @@
             </p>
           </div>
         </div>
-        <div class="absolute right-0 video-hero left-[0] -z-[1] w-full">
-          <!-- <video
-            class="w-full opacity-[30%]"
-            src="./assets/img/HeaderMobvideo.mp4"
-            autoplay
-            muted
-            loop
-            playsinline
-          ></video> -->
-          <video
-          class="w-full opacity-[30%]"
-          src="./assets/img/d4df570d+.mp4"
-          autoplay
-          muted
-          loop
-          playsinline
-        ></video>
-        </div>
       </div>
     </header>
+    
     <main>
-      <section>
-        <div class="wrapper">
+      <section class="video-section">
+        <div class="video-section__inner">
+         <div
+         class="  md:w-[65%]  w-full overflow-hidden video-top "
+       >
+         <video
+           class="w-full"
+           src="./assets/img/secondvideo.MP4"
+           autoplay
+           muted
+           loop
+           playsinline
+         ></video>
+       </div>
+       <div class="circle">
+
+       </div>
+       <div
+       class="  md:w-[65%]  w-full overflow-hidden video-bottom"
+     >
+       <video
+         class="w-full"
+         src="./assets/img/secondvideo.MP4"
+         autoplay
+         muted
+         loop
+         playsinline
+       ></video>
+     </div>
+        </div>
+     </section>
+      <section class="md:relative">
+        <div class="wrapper relative z-[200]">
           <div>
-            <div class="sm:mx-auto hero-title tracking-[3px] text-[#F6F4F4] text-[62px]">
-              <h1>
-                SERENITY
-              </h1>
-              <span class=" mr-1 block text-end leading-[20px]">MEDIA</span>
+            <div
+              class="mx-auto w-full max-w-[335px] md:max-w-[365px] tracking-[3px] text-[#F6F4F4] text-[62px] md:text-[68px]"
+            >
+              <h1 class="font-bold">SERENITY</h1>
+              <span class="mr-1 block text-end leading-[20px] font-extrabold"
+                >MEDIA</span
+              >
             </div>
-            
+
             <div class="pt-[40px] flex flex-col justify-center items-center">
-              <div>
-                <p class="text-[#BBBBBB] font-normal text-[16px] leading-[19px]">
-                  Мы осуществляем перекрестное <br />
-                  продвижение, направленное <br />
-                  на стимулировоание сбыта
-                </p>
-                <button
-                  class="bg-[#E2146B] text-center text-[12px] font-extrabold text-white py-[15px] min-w-[198px] rounded-[4px] mt-[40px]"
-                >
-                  УЗНАТЬ БОЛЬШЕ
-                </button>
+              <div class="md:w-full">
+                <div class="md:flex">
+                  <p
+                    class="text-[#BBBBBB] md:relative md:left-[60%] font-normal text-[16px] leading-[19px]"
+                  >
+                    Мы осуществляем перекрестное <br />
+                    продвижение, направленное <br />
+                    на стимулировоание сбыта
+                  </p>
+                </div>
+                <div>
+                  <button
+                    class="bg-[#E2146B] md:relative md:left-[50%] md:-translate-x-[20%] text-center text-[12px] font-extrabold text-white py-[15px] min-w-[198px] rounded-[4px] mt-[40px]"
+                  >
+                    УЗНАТЬ БОЛЬШЕ
+                  </button>
+                </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="opacity-[.3] -mr-10 w-full overflow-hidden">
-          <!-- <video
+        <div
+          class="opacity-[30%] md:absolute md:bottom-0 -left-10 md:rotate-[-5deg] md:w-[65%] -mr-10 w-full video-bottom-2 overflow-hidden"
+        >
+          <video
             class="w-full"
-            src="./assets/img/secondvideomob.mp4"
+            src="./assets/img/secondvideo.MP4"
             autoplay
             muted
             loop
             playsinline
-          ></video> -->
-          <video
-          class="w-full "
-          src="./assets/img/d4df570d+.mp4"
-          autoplay
-          muted
-          loop
-          playsinline
-        ></video>
+          ></video>
+        </div>
+      </section>
+      <div id="MainContain">
+        <section class="pt-10 md:pt-56">
+          <div class="wrapper">
+            <div class="md:flex md:py-12 xl:justify-between md:gap-4">
+              <div class="md:w-7/12 xl:w-5/12">
+                <div>
+                  <h3
+                    class="text-[33px] md:text-[36px] text-[#E6E6E6] font-normal leading-[17px] md:leading-[19px]"
+                  >
+                    <span class="text-[#E2146B]">Мы</span> осуществляем
+                  </h3>
+                  <p
+                    class="text-[#F6F4F4] leading-[17px] md:leading-[19px] text-[12px] md:text-[14px] font-normal pt-[25px]"
+                  >
+                    перекрестное продвижение, направленное на стимулировоание
+                    сбыта и повышение осведомленности брендов с участием двух и
+                    более компаний, иными словами взаимное продвижение, которое
+                    помогает компаниям решить такие задачи как:
+                  </p>
+                </div>
+                <div class="flex justify-between pt-10">
+                  <div class="w-[28%] md:w-[30%]">
+                    <img src="./assets/img/eye.png" alt="" />
+                    <p class="text-[#BBBBBB] text-[13px] leading-[17px] md:text-[14px] md:leading-[19px] py-5">
+                      Повышение узнаваемости бренда
+                    </p>
+                  </div>
+                  <div class="w-[28%] md:w-[30%]">
+                    <img src="./assets/img/layer.png" alt="" />
+                    <p class="text-[#BBBBBB] text-[13px] leading-[17px] md:text-[14px] md:leading-[19px] py-5">
+                      Расширениеn базы клиентов
+                    </p>
+                  </div>
+                  <div class="w-[28%] md:w-[30%]">
+                    <img src="./assets/img/bag.png" alt="" />
+                    <p class="text-[#BBBBBB] text-[13px] leading-[17px] md:text-[14px] md:leading-[19px] py-5">
+                      Увеличение <br />
+                      продаж за счет стимулирования <br />
+                      сбыта.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="py-5 lg:py-0 overflow-hidden flex justify-center md:w-5/12"
+              >
+                <img src="/assets/img/Girl.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="pt-4 mb-[120px]">
+          <div class="wrapper">
+            <div class="md:flex md:mb-8 md:justify-between">
+              <div
+                class="flex md:w-7/12 lg:w-6/12 flex-col justify-center items-center md:order-1"
+              >
+                <div class="text-white pb-5 pt-[50px]">
+                  <h3 class="font-normal text-[32px] leading-[17px] md:text-[36px] md:leading-[19px]">
+                    <span class="text-[#E2146B]">Мы</span> проводим
+                  </h3>
+                  <p class="font-normal text-[12px] md:text-[14px] leading-[15px] md:leading-[17px] py-6">
+                    кросс-промоушн в следующих видах:
+                  </p>
+                  <div class="flex gap-16">
+                    <p class="font-normal text-[12px] leading-[15px] w-[40%] md:text-[14px] md:leading-[17px]">
+                      Общая рекламная кампания, в которой при рекламе одного
+                      продукта упоминается продукт другой компании.
+                    </p>
+                    <p class="font-normal text-[12px] leading-[15px] w-[40%] md:text-[14px] md:leading-[17px]">
+                      Совместные бонусные программы, в которых клиентам одной
+                      компании дают скидку в другой фирме.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="relative lg:w-5/12 md:w-4/12">
+                <div class="absolute md:hidden left-0 bottom-1">
+                  <img src="/assets/img/yandex.png" alt="" />
+                </div>
+                <img src="./assets/img/gift.png" class="w-full" alt="" />
+              </div>
+            </div>
+
+            <div class="md:flex md:justify-between">
+              <div class="md:order-1 hidden md:block lg:w-6/12 md:w-7/12">
+                <div class="md:mb-3">
+                  <img src="/assets/img/yandex.png" alt="" />
+                </div>
+                <h3
+                  class="font-normal text-[14px] leading-[17px] text-white mb-10 pt-1"
+                >
+                  Постоянным партнёром SERENITY MEDIA <br />
+                  является Яндекс Плюс.
+                </h3>
+              </div>
+              <div class="md:w-4/12 lg:w-5/12">
+                <div class="flex gap-[23px] mb-[15px]">
+                  <div><img src="/assets/img/flag1.png" alt="" /></div>
+                  <div><img src="/assets/img/flag2.png" alt="" /></div>
+                  <div><img src="/assets/img/flag3.png" alt="" /></div>
+                </div>
+                <div>
+                  <p class="text-[12px] leading-[14px] text-white font-normal">
+                    Агентство SERENITY MEDIA проводит <br />
+                    работы как РФ, так и в странах СНГ.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="flex flex-col justify-start text-white pt-24">
+              <div class="pb-10 md:flex md:justify-between">
+                <div class="md:w-6/12">
+                  <h2 class="font-normal text-[32px] leading-[33px] md:text-[36px] mb-8">
+                    <span class="text-[#E2146B] text-[36px]">Наши</span> <br />
+                    контакты
+                  </h2>
+                </div>
+
+                <div class="md:w-6/12">
+                  <h2 class="text-[24px] font-normal leading-[29px] block mb-6">
+                    +7 495 988 22 64
+                  </h2>
+                  <p class="font-normal text-[14px] leading-[17px]">
+                    Москва, Ленинградский проспект, д. 10, стр 2
+                    <br class="hidden xl:block" />
+                    <span class="underline">contact@serenitymedia.ru</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
-      </section>
-      <section class="pt-10">
-        <div class="wrapper">
-          <div>
-            <h1 class="text-[33px] text-[#E6E6E6] font-normal leading-[17px]">
-              <span class="text-[#E2146B]">Мы</span> осуществляем
-            </h1>
-            <p
-              class="text-[#F6F4F4] leading-[17px] text-[12px] font-normal pt-[25px]"
-            >
-              перекрестное продвижение, направленное на стимулировоание сбыта и
-              повышение осведомленности брендов с участием двух и более
-              компаний, иными словами взаимное продвижение, которое помогает
-              компаниям решить такие задачи как:
-            </p>
-          </div>
-          <div class="flex justify-between pt-10">
-            <div class="w-[28%] ">
-              <img src="./assets/img/eye.png" alt="" />
-              <p class="text-[#BBBBBB] text-[13px] leading-[17px] py-5">
-                Повышение узнаваемости бренда
-              </p>
-            </div>
-            <div class="w-[28%] ">
-              <img src="./assets/img/layer.png" alt="" />
-              <p class="text-[#BBBBBB] text-[13px] leading-[17px] py-5">
-                Расширениеn базы клиентов
-              </p>
-            </div>
-            <div class="w-[28%] ">
-              <img src="./assets/img/bag.png" alt="" />
-              <p class="text-[#BBBBBB] text-[13px] leading-[17px] py-5">
-                Увеличение <br />
-                продаж за счет стимулирования <br />
-                сбыта.
-              </p>
-            </div>
-          </div>
-          <div class="py-5 overflow-hidden flex justify-center ">
-            <img src="/assets/img/Girl.png" alt="">
-          </div>
-        </div>
-      </section>
-      <section class="pt-4 mb-[120px]">
-        <div class="wrapper">
-          <div class="flex flex-col justify-center items-center">
-            <div class="text-white pb-5 pt-[50px]">
-              <h1 class="font-normal text-[32px] leading-[17px]">
-                <span class="text-[#E2146B]">Мы</span> проводим
-              </h1>
-              <p class="font-normal text-[12px] leading-[15px] py-6">
-                кросс-промоушн в следующих видах:
-              </p>
-              <div class="flex gap-16">
-                <p class="font-normal text-[12px] leading-[15px] w-[40%]">
-                  Общая рекламная 
-                  кампания, в которой при рекламе одного продукта
-                  упоминается продукт другой компании.
-                </p>
-                <p class="font-normal text-[12px] leading-[15px] w-[40%]">
-                  Совместные бонусные программы, в которых клиентам одной
-                  компании
-                  дают скидку в другой фирме.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="relative">
-            <div class="absolute left-0 bottom-1">
-              <img src="/assets/img/yandex.png"  alt="">
-            </div>
-            <img src="./assets/img/gift.png" class="w-full" alt="">
-          </div>
-          <div >
-            <h3 class="font-normal text-[14px] leading-[17px] text-white mb-10 pt-1">Постоянным партнёром SERENITY MEDIA <br> является Яндекс Плюс.</h3>
-            <div>
-              <div class="flex gap-[23px] mb-[15px]">
-                <div><img src="/assets/img/flag1.png" alt=""></div>
-                <div><img src="/assets/img/flag2.png" alt=""></div>
-                <div><img src="/assets/img/flag3.png" alt=""></div>
-              </div>
-              <div>
-                <p class="text-[12px] leading-[14px] text-white font-normal">Агентство SERENITY MEDIA проводит <br> работы как РФ, так и в странах СНГ.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
     </main>
     <footer>
-      <div class="wrapper">
-        <div class="flex flex-col justify-start items-center text-white">
-          <div class="pb-10">
-            <h2 class="font-normal text-[32px] leading-[33px] mb-8"><span class="text-[#E2146B] text-[36px]">Наши</span> <br> контакты </h2>
-            <span class="text-[24px] font-normal leading-[29px] block mb-6">+7 495 988 22 64</span>
-            <p class="font-normal text-[14px] leading-[17px]">Москва, Ленинградский проспект, д. 10, стр 2
-              <span class="underline">contact@serenitymedia.ru</span></p>
-          </div>
-        </div>
-      </div>
       <div>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d577332.5675105754!2d36.72618981222709!3d55.581033440442496!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54afc73d4b0c9%3A0x3d44d6cc5757cf4c!2sMoscow%2C%20Russia!5e0!3m2!1sen!2saz!4v1731158994628!5m2!1sen!2saz" width="100%" height="512" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d577332.5675105754!2d36.72618981222709!3d55.581033440442496!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54afc73d4b0c9%3A0x3d44d6cc5757cf4c!2sMoscow%2C%20Russia!5e0!3m2!1sen!2saz!4v1731158994628!5m2!1sen!2saz"
+          width="100%"
+          height="512"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
       </div>
     </footer>
   </body>

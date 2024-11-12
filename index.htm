@@ -193,11 +193,19 @@
       <section class="video-section">
         <div class="video-section__inner">
          <div
-         class="  md:w-[65%]  w-full overflow-hidden video-top "
+         class="md:w-[65%]  w-full overflow-hidden video-top "
        >
          <video
-           class="w-full"
+           class="w-full hidden md:block"
            src="./assets/img/secondvideo.MP4"
+           autoplay
+           muted
+           loop
+           playsinline
+         ></video>
+         <video
+           class="w-full md:hidden"
+           src="./assets/img/x.mp4"
            autoplay
            muted
            loop
@@ -211,8 +219,16 @@
        class="  md:w-[65%]  w-full overflow-hidden video-bottom"
      >
        <video
-         class="w-full"
+         class="w-full hidden md:block"
          src="./assets/img/secondvideo.MP4"
+         autoplay
+         muted
+         loop
+         playsinline
+       ></video>
+       <video
+         class="w-full md:hidden"
+         src="./assets/img/x.mp4"
          autoplay
          muted
          loop

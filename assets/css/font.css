@@ -67,7 +67,7 @@ header {
     .video-top {
         position: absolute;
         right: 0;
-        top: -180px;
+        top: -100px;
         transform: inherit;
         opacity: 30%;
     }

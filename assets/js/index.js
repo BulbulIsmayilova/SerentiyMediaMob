@@ -12,9 +12,9 @@ document.addEventListener("DOMContentLoaded", function () {
     width = window.innerWidth;
 
     if (width <= 768) {
-      flag1.addEventListener("click", openFlag);
-      flag2.addEventListener("click", openFlag);
-      flag3.addEventListener("click", openFlag);
+      flag1.addEventListener("click", () => openFlag(0));
+      flag2.addEventListener("click", () => openFlag(1));
+      flag3.addEventListener("click", () => openFlag(2));
       flag1.removeEventListener("mouseover", hoverOpenFlag)
       flag2.removeEventListener("mouseover", hoverOpenFlag)
       flag3.removeEventListener("mouseover", hoverOpenFlag)
@@ -37,8 +37,15 @@ document.addEventListener("DOMContentLoaded", function () {
   window.addEventListener("resize", updateFlagEvents);
 });
 
-const openFlag = () => {
+const openFlag = (index) => {
   if (flag) {
+    for (let i = 0; i < flagContainFlags.length; i++) {
+      if(i == index){
+        flagContainFlags[i].src = `assets/img/${flagActiveArr[i]}`
+      }else{
+        flagContainFlags[i].src = `assets/img/${flagArr[i]}`
+      }
+    }
     flagContain.style.display = "block";
   } else {
     flagContain.style.display = "none";

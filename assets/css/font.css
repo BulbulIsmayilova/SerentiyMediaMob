@@ -8,6 +8,18 @@
     src: url('../font/Bodoni72C.otf');
 }
 
+h1, span {
+    font-family: "Bodoni" !important;
+}
+
+* {
+    font-family: "ProximaRegular" !important;
+}
+
+.flagContain-flags:nth-child(1) img {
+    filter: blur();
+}
+
 header {
     position: relative;
     z-index: 2;
@@ -98,13 +110,6 @@ header {
     padding-inline: 20px;
 }
 
-h1, span {
-    font-family: "Bodoni" !important;
-}
-
-* {
-    font-family: "ProximaRegular" !important;
-}
 
 @media only screen and (min-width: 768px) {
     #MainContain {

@@ -16,6 +16,22 @@ h1, span {
     font-family: "ProximaRegular" !important;
 }
 
+#border-bottom > li > div{
+    display: inline-block;
+}
+
+#border-bottom > li > div > div {
+    height: 1.5px;
+    width: 100%;
+    margin-top: -6px;
+    background-color: #E2146B;
+    display: none;
+}
+
+#border-bottom > li > div:hover div {
+    display: block;
+}
+
 .flagContain-flags:nth-child(1) img {
     filter: blur();
 }

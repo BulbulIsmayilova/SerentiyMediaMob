@@ -8,31 +8,42 @@ const flag3 = document.getElementById("flag3");
 const flagContainFlags = document.querySelectorAll(".flagContain-flags > img")
 
 document.addEventListener("DOMContentLoaded", function () {
+  function openFlagClick0() { openFlag(0); }
+  function openFlagClick1() { openFlag(1); }
+  function openFlagClick2() { openFlag(2); }
+
+  function hoverFlag0() { hoverOpenFlag(0); }
+  function hoverFlag1() { hoverOpenFlag(1); }
+  function hoverFlag2() { hoverOpenFlag(2); }
+
+  function hideFlagContain() {
+    flagContain.style.display = "none";
+  }
+
   function updateFlagEvents() {
     width = window.innerWidth;
 
     if (width <= 768) {
-      flag1.addEventListener("click", () => openFlag(0));
-      flag2.addEventListener("click", () => openFlag(1));
-      flag3.addEventListener("click", () => openFlag(2));
-      flag1.removeEventListener("mouseover", hoverOpenFlag)
-      flag2.removeEventListener("mouseover", hoverOpenFlag)
-      flag3.removeEventListener("mouseover", hoverOpenFlag)
-      flagContain.removeEventListener("mouseleave", function(){
-        flagContain.style.display = "none"
-      })
+      flag1.addEventListener("click", openFlagClick0);
+      flag2.addEventListener("click", openFlagClick1);
+      flag3.addEventListener("click", openFlagClick2);
+
+      flag1.removeEventListener("mouseover", hoverFlag0);
+      flag2.removeEventListener("mouseover", hoverFlag1);
+      flag3.removeEventListener("mouseover", hoverFlag2);
+      flagContain.removeEventListener("mouseleave", hideFlagContain);
     } else {
-      flag1.removeEventListener("click", openFlag);
-      flag2.removeEventListener("click", openFlag);
-      flag3.removeEventListener("click", openFlag);
-      flag1.addEventListener("mouseover", () => hoverOpenFlag(0))
-      flag2.addEventListener("mouseover", () => hoverOpenFlag(1))
-      flag3.addEventListener("mouseover", () => hoverOpenFlag(2))
-      flagContain.addEventListener("mouseleave", function(){
-        flagContain.style.display = "none"
-      })
+      flag1.removeEventListener("click", openFlagClick0);
+      flag2.removeEventListener("click", openFlagClick1);
+      flag3.removeEventListener("click", openFlagClick2);
+
+      flag1.addEventListener("mouseover", hoverFlag0);
+      flag2.addEventListener("mouseover", hoverFlag1);
+      flag3.addEventListener("mouseover", hoverFlag2);
+      flagContain.addEventListener("mouseleave", hideFlagContain);
     }
   }
+
   updateFlagEvents();
   window.addEventListener("resize", updateFlagEvents);
 });
@@ -57,6 +68,7 @@ let flagArr = ['flag1.svg', 'flag2.svg', 'flag3.svg']
 let flagActiveArr = ['active1.png','active1.png','active1.png']
 
 const hoverOpenFlag = (index) => {
+  if(width <= 768) return
   for (let i = 0; i < flagContainFlags.length; i++) {
     if(i == index){
       flagContainFlags[i].src = `assets/img/${flagActiveArr[i]}`

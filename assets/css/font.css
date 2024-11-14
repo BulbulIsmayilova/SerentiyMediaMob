@@ -1,14 +1,23 @@
-@font-face{
+@font-face {
     font-family: "ProximaRegular";
-    src: url('../font/Proxima\ Nova\ Regular.otf')  ;
+    src: url('../font/Proxima\ Nova\ Regular.otf');
 }
 
 @font-face {
-    font-family: "Bodoni" ;
+    font-family: "Bodoni";
     src: url('../font/Bodoni72C.otf');
 }
 
-h1, span {
+@font-face {
+    font-family: "Bodoni-2";
+    src: url('../font/Bodoni72C-Bold.otf');
+}
+
+b {
+    font-family: "Bodoni-2"!important;
+}
+
+span {
     font-family: "Bodoni" !important;
 }
 
@@ -16,11 +25,11 @@ h1, span {
     font-family: "ProximaRegular" !important;
 }
 
-#border-bottom > li > div{
+#border-bottom>li>div {
     display: inline-block;
 }
 
-#border-bottom > li > div > div {
+#border-bottom>li>div>div {
     height: 1.5px;
     width: 100%;
     margin-top: -6px;
@@ -28,7 +37,7 @@ h1, span {
     display: none;
 }
 
-#border-bottom > li > div:hover div {
+#border-bottom>li>div:hover div {
     display: block;
 }
 
@@ -88,6 +97,7 @@ header {
     background-color: rgba(0, 0, 0, 0.35);
     filter: blur(200px);
 }
+
 /*kwork end*/
 
 #flagContain {
@@ -121,7 +131,7 @@ header {
     }
 }
 
-.wrapper{
+.wrapper {
     width: 100%;
     padding-inline: 20px;
 }
@@ -139,8 +149,8 @@ header {
         width: 85%;
         margin: auto;
     }
-    .wrapper{
+
+    .wrapper {
         padding-inline: 100px;
     }
 }
-

@@ -1,93 +1,135 @@
 const flagContain = document.getElementById("flagContain");
 let flag = true;
 let width = window.innerWidth;
-const borderBottom = document.getElementById("border-bottom")
+const borderBottom = document.getElementById("border-bottom");
 
 const data = [
   [
     {
-      name : "Святой источник",
-      href : "https://serenity-group.ru/promo/ya_svyatoiist"
+      name: "Святой источник",
+      href: "https://serenity-group.ru/promo/ya_svyatoiist",
     },
     {
-      name : "Крутой Окер",
-      href : "https://serenity-group.ru/promo/yandexplus_krutoyoker"
+      name: "Крутой Окер",
+      href: "https://serenity-group.ru/promo/yandexplus_krutoyoker",
     },
     {
-      name : "Геркулес",
-      href : "https://serenity-group.ru/promo/yandexplus_rusprod"
+      name: "Геркулес",
+      href: "https://serenity-group.ru/promo/yandexplus_rusprod",
     },
     {
-      name : "Фреш Бар",
-      href : "https://serenity-group.ru/promo/ya_freshbar"
+      name: "Фреш Бар",
+      href: "https://serenity-group.ru/promo/ya_freshbar",
     },
     {
-      name : "Росинка",
-      href : "https://serenitymedia.ru/promo/ya_rosinka/"
+      name: "Росинка",
+      href: "https://serenitymedia.ru/promo/ya_rosinka/",
     },
     {
-      name : "Barinoff",
-      href : "https://serenity-group.ru/promo/ya_barinoff"
+      name: "Barinoff",
+      href: "https://serenity-group.ru/promo/ya_barinoff",
     },
     {
-      name : "Фрутилад",
-      href : "https://frutilad.promo/"
+      name: "Фрутилад",
+      href: "https://frutilad.promo/",
     },
     {
-      name : "Сапсан",
-      href : "https://serenity-group.ru/promo/ya_sapsan"
+      name: "Сапсан",
+      href: "https://serenity-group.ru/promo/ya_sapsan",
     },
     {
-      name : "Айсберри Филевское",
-      href : "https://serenity-group.ru/promo/ya_iceberryfilevskoe"
+      name: "Айсберри Филевское",
+      href: "https://serenity-group.ru/promo/ya_iceberryfilevskoe",
     },
     {
-      name : "Айсберри Как раньше",
-      href : "https://serenity-group.ru/promo/ya_iceberrykakranshe"
+      name: "Айсберри Как раньше",
+      href: "https://serenity-group.ru/promo/ya_iceberrykakranshe",
     },
     {
-      name : "Русский продукт Великий устюг",
-      href : "https://serenitymedia.ru/promo/ya_gercules"
+      name: "Русский продукт Великий устюг",
+      href: "https://serenitymedia.ru/promo/ya_gercules",
     },
   ],
   [
     {
-      name : "Coca-Cola",
-      href : "https://serenitymedia.uz/promo/coca-cola_ny25/"
+      name: "Coca-Cola",
+      href: "https://serenitymedia.uz/promo/coca-cola_ny25/",
     },
     {
-      name : "Alpen Gold",
-      href : "https://alpengold-promo.me/"
-    }
+      name: "Alpen Gold",
+      href: "https://alpengold-promo.me/",
+    },
   ],
   [
     {
-      name : "Galmart",
-      href : "https://serenitymedia.ru/promo/ya_galmart/"
+      name: "Galmart",
+      href: "https://serenitymedia.ru/promo/ya_galmart/",
     },
     {
-      name : "Alpen Gold",
-      href : "https://alpengold-promo.me/"
-    }
-  ]
-]
+      name: "Alpen Gold",
+      href: "https://alpengold-promo.me/",
+    },
+  ],
+];
 
 const flag1 = document.getElementById("flag1");
 const flag2 = document.getElementById("flag2");
 const flag3 = document.getElementById("flag3");
 const flag4 = document.getElementById("flag4");
-const flagContainFlags = document.querySelectorAll(".flagContain-flags > img")
+const flagContainFlags = document.querySelectorAll(".flagContain-flags > img");
+const flagContainFlagsBtns = document.querySelectorAll(".flagContain-flags");
+
+const eventHandlers = new Map();
+
+const changeHoverAndClick = (arg) => {
+  for (let i = 0; i < flagContainFlagsBtns.length; i++) {
+    if (!eventHandlers.has(i)) {
+      eventHandlers.set(i, {
+        hover: () => hoverOpenFlag(i),
+        click: () => hoverOpenFlag(i),
+      });
+    }
+
+    const { hover, click } = eventHandlers.get(i);
+
+    if (arg >= 768) {
+      flagContainFlagsBtns[i].addEventListener("mouseover", hover);
+      flagContainFlagsBtns[i].removeEventListener("click", click);
+    } else {
+      flagContainFlagsBtns[i].addEventListener("click", click);
+      flagContainFlagsBtns[i].removeEventListener("mouseover", hover);
+    }
+  }
+};
+
+
 
 document.addEventListener("DOMContentLoaded", function () {
-  function openFlagClick0() { openFlag(0); }
-  function openFlagClick1() { openFlag(1); }
-  function openFlagClick2() { openFlag(2); }
-  function openFlagClick3() { openFlag(3); }
+  function openFlagClick0() {
+    openFlag(0);
+  }
+  function openFlagClick1() {
+    openFlag(1);
+  }
+  function openFlagClick2() {
+    openFlag(2);
+  }
+  function openFlagClick3() {
+    openFlag(3);
+  }
 
-  function hoverFlag0() { hoverOpenFlag(0); }
-  function hoverFlag1() { hoverOpenFlag(1); }
-  function hoverFlag2() { hoverOpenFlag(2); }
-  function hoverFlag3() { hoverOpenFlag(3); }
+  function hoverFlag0() {
+    hoverOpenFlag(0);
+  }
+  function hoverFlag1() {
+    hoverOpenFlag(1);
+  }
+  function hoverFlag2() {
+    hoverOpenFlag(2);
+  }
+  function hoverFlag3() {
+    hoverOpenFlag(3);
+  }
 
   function hideFlagContain() {
     flagContain.style.display = "none";
@@ -119,6 +161,7 @@ document.addEventListener("DOMContentLoaded", function () {
       flag4.addEventListener("mouseover", hoverFlag3);
       flagContain.addEventListener("mouseleave", hideFlagContain);
     }
+    changeHoverAndClick(width)
   }
 
   updateFlagEvents();
@@ -128,10 +171,10 @@ document.addEventListener("DOMContentLoaded", function () {
 const openFlag = (index) => {
   if (flag) {
     for (let i = 0; i < flagContainFlags.length; i++) {
-      if(i == index){
-        flagContainFlags[i].classList.remove("gray")
-      }else{
-        flagContainFlags[i].classList.add("gray")
+      if (i == index) {
+        flagContainFlags[i].classList.remove("gray");
+      } else {
+        flagContainFlags[i].classList.add("gray");
       }
     }
     flagContain.style.display = "block";
@@ -139,33 +182,33 @@ const openFlag = (index) => {
     flagContain.style.display = "none";
   }
   flag = !flag;
-  changeContent(index)
+  changeContent(index);
 };
 
 const hoverOpenFlag = (index) => {
   for (let i = 0; i < flagContainFlags.length; i++) {
-    if(i == index){
-      flagContainFlags[i].classList.remove("gray")
-    }else{
-      flagContainFlags[i].classList.add("gray")
+    if (i == index) {
+      flagContainFlags[i].classList.remove("gray");
+    } else {
+      flagContainFlags[i].classList.add("gray");
     }
   }
-  flagContain.style.display = "block"
-  changeContent(index)
-}
+  flagContain.style.display = "block";
+  changeContent(index);
+};
 
 const changeContent = (index) => {
-  if(index === 3) return
-  let arr = data[index]
-  let kod = ''
+  if (index === 3) return;
+  let arr = data[index];
+  let kod = "";
 
-  arr.map(item => {
-    return kod += `<li>
+  arr.map((item) => {
+    return (kod += `<li>
                     <div>
                       <a target="_blank" href='${item.href}'>${item.name}</a>
                       <div></div>
                     </div>
-                  </li>`
-  })
-  borderBottom.innerHTML = kod
-}
+                  </li>`);
+  });
+  borderBottom.innerHTML = kod;
+};

@@ -1,6 +1,76 @@
 const flagContain = document.getElementById("flagContain");
 let flag = true;
 let width = window.innerWidth;
+const borderBottom = document.getElementById("border-bottom")
+
+const data = [
+  [
+    {
+      name : "Святой источник",
+      href : "https://serenity-group.ru/promo/ya_svyatoiist"
+    },
+    {
+      name : "Крутой Окер",
+      href : "https://serenity-group.ru/promo/yandexplus_krutoyoker"
+    },
+    {
+      name : "Геркулес",
+      href : "https://serenity-group.ru/promo/yandexplus_rusprod"
+    },
+    {
+      name : "Фреш Бар",
+      href : "https://serenity-group.ru/promo/ya_freshbar"
+    },
+    {
+      name : "Росинка",
+      href : "https://serenitymedia.ru/promo/ya_rosinka/"
+    },
+    {
+      name : "Barinoff",
+      href : "https://serenity-group.ru/promo/ya_barinoff"
+    },
+    {
+      name : "Фрутилад",
+      href : "https://frutilad.promo/"
+    },
+    {
+      name : "Сапсан",
+      href : "https://serenity-group.ru/promo/ya_sapsan"
+    },
+    {
+      name : "Айсберри Филевское",
+      href : "https://serenity-group.ru/promo/ya_iceberryfilevskoe"
+    },
+    {
+      name : "Айсберри Как раньше",
+      href : "https://serenity-group.ru/promo/ya_iceberrykakranshe"
+    },
+    {
+      name : "Русский продукт Великий устюг",
+      href : "https://serenitymedia.ru/promo/ya_gercules"
+    },
+  ],
+  [
+    {
+      name : "Coca-Cola",
+      href : "https://serenitymedia.uz/promo/coca-cola_ny25/"
+    },
+    {
+      name : "Alpen Gold",
+      href : "https://alpengold-promo.me/"
+    }
+  ],
+  [
+    {
+      name : "Galmart",
+      href : "https://serenitymedia.ru/promo/ya_galmart/"
+    },
+    {
+      name : "Alpen Gold",
+      href : "https://alpengold-promo.me/"
+    }
+  ]
+]
 
 const flag1 = document.getElementById("flag1");
 const flag2 = document.getElementById("flag2");
@@ -59,9 +129,9 @@ const openFlag = (index) => {
   if (flag) {
     for (let i = 0; i < flagContainFlags.length; i++) {
       if(i == index){
-        flagContainFlags[i].src = `assets/img/${flagActiveArr[i]}`
+        flagContainFlags[i].classList.remove("gray")
       }else{
-        flagContainFlags[i].src = `assets/img/${flagArr[i]}`
+        flagContainFlags[i].classList.add("gray")
       }
     }
     flagContain.style.display = "block";
@@ -69,18 +139,33 @@ const openFlag = (index) => {
     flagContain.style.display = "none";
   }
   flag = !flag;
+  changeContent(index)
 };
-
-let flagArr = ['flag1.svg', 'flag2.svg', 'flag3.svg', 'flag3.svg']
-let flagActiveArr = ['active1.png','active2.png','active3.png','active4.png']
 
 const hoverOpenFlag = (index) => {
   for (let i = 0; i < flagContainFlags.length; i++) {
     if(i == index){
-      flagContainFlags[i].src = `assets/img/${flagActiveArr[i]}`
+      flagContainFlags[i].classList.remove("gray")
     }else{
-      flagContainFlags[i].src = `assets/img/${flagArr[i]}`
+      flagContainFlags[i].classList.add("gray")
     }
   }
   flagContain.style.display = "block"
+  changeContent(index)
+}
+
+const changeContent = (index) => {
+  if(index === 3) return
+  let arr = data[index]
+  let kod = ''
+
+  arr.map(item => {
+    return kod += `<li>
+                    <div>
+                      <a target="_blank" href='${item.href}'>${item.name}</a>
+                      <div></div>
+                    </div>
+                  </li>`
+  })
+  borderBottom.innerHTML = kod
 }

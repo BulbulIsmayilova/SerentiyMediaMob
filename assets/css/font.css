@@ -13,6 +13,10 @@
     src: url('../font/Bodoni72C-Bold.otf');
 }
 
+.gray {
+    filter: grayscale(100%) contrast(90%) opacity(85%);
+}
+
 b {
     font-family: "Bodoni-2"!important;
 }
@@ -39,10 +43,6 @@ span {
 
 #border-bottom>li>div:hover div {
     display: block;
-}
-
-.flagContain-flags:nth-child(1) img {
-    filter: blur();
 }
 
 header {
